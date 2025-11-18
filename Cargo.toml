@@ -18,7 +18,8 @@ equivalent.workspace = true # = { version = "1.0", default-features = false }
 hashbrown.workspace= true # = { version = "0.16", default-features = false }
 arbitrary.workspace = true # = { version = "1.0", optional = true, default-features = false }
 quickcheck.workspace = true #  = { version = "1.0", optional = true, default-features = false }
-#serde_core.workspace = true # = { version = "1.0.220", optional = true, default-features = false }
+serde_core = { workspace=true, version = "1.0.220", optional = true }
+serde = { workspace = true, version = "1.0", optional = true }
 rayon.workspace = true # = { version = "1.9", optional = true }
 sval.workspace = true # = { version = "2", optional = true, default-features = false }
 
@@ -41,7 +42,7 @@ fnv.workspace = true # = "1.0"
 default = ["std"]
 std = []
 serde = [
-#"dep:serde_core", "dep:serde"
+"dep:serde_core", "dep:serde"
 ]
 
 # for testing only, of course
